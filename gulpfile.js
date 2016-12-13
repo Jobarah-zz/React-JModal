@@ -1,55 +1,48 @@
-// declarations, dependencies
-// ----------------------------------------------------------------------------
-var gulp = require('gulp');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
-var gutil = require('gulp-util');
-var babelify = require('babelify');
+let gulp = require('gulp');
+let browserify = require('browserify');
+let source = require('vinyl-source-stream');
+let gutil = require('gulp-util');
+let connect = require('gulp-connect');
+let babelify = require('babelify');
 
-// External dependencies you do not want to rebundle while developing,
-// but include in your application deployment
-var dependencies = [
+let dependencies = [
 	'react',
   	'react-dom'
 ];
-// keep a count of the times a task refires
-var scriptsCount = 0;
 
-// Gulp tasks
-// ----------------------------------------------------------------------------
-gulp.task('scripts', function () {
+gulp.task('connect', () => {
+  connect.server({
+    root: './',
+    livereload: true
+  });
+});
+
+gulp.task('js', ['scripts'], () => {
+  gulp.src(['./components/*/*/*.js','./components/*.js'])
+    .pipe(connect.reload());
+});
+
+gulp.task('scripts', () => {
     bundleApp(false);
 });
 
-gulp.task('deploy', function (){
-	bundleApp(true);
+gulp.task('watch', () => {
+	gulp.watch(['js'], ['scripts']);
 });
 
-gulp.task('watch', function () {
-	gulp.watch(['./components/*.js', './components/*/*.js'], ['scripts']);
+gulp.task('watch', () => {
+  gulp.watch(['./components/*.js', './components/*/*/*.js'], ['js', 'watch']);
 });
 
-// When running 'gulp' on the terminal this task will fire.
-// It will start watching for changes in every .js file.
-// If there's a change, the task 'scripts' defined above will fire.
-gulp.task('default', ['scripts','watch']);
+gulp.task('default', ['connect','watch', 'scripts']);
 
-// Private Functions
-// ----------------------------------------------------------------------------
-function bundleApp(isProduction) {
-	scriptsCount++;
-	// Browserify will bundle all our js files together in to one and will let
-	// us use modules in the front end.
-	var appBundler = browserify({
+ let bundleApp = (isProduction) => {
+	let appBundler = browserify({
     	entries: './components/app.js',
     	debug: true
   	})
 
-	// If it's not for production, a separate vendors.js file will be created
-	// the first time gulp is run so that we don't have to rebundle things like
-	// react everytime there's a change in the js file
-  	if (!isProduction && scriptsCount === 1){
-  		// create vendors.js for dev environment.
+  	if (!isProduction){
   		browserify({
 			require: dependencies,
 			debug: true
@@ -60,16 +53,12 @@ function bundleApp(isProduction) {
 			.pipe(gulp.dest('./dist'));
   	}
   	if (!isProduction){
-  		// make the dependencies external so they dont get bundled by the 
-		// app bundler. Dependencies are already bundled in vendor.js for
-		// development environments.
   		dependencies.forEach(function(dep){
   			appBundler.external(dep);
   		})
   	}
 
   	appBundler
-  		// transform ES6 and JSX to ES5 with babelify
 	  	.transform("babelify", {presets: ["es2015", "react"]})
 	    .bundle()
 	    .on('error',gutil.log)

@@ -2,12 +2,16 @@ import React from 'react';
 
 export default class Modal extends React.Component {
 	render() {
-		const { modalStyles } = this.props;
+		const { modalStyles, overlayStyles } = this.props;
 
 		return(
-			<div className="modal-bkg">
-				<div className="modal-data-holder" styles={ modalStyles }>
-					{this.props.children}
+			<div className="modal-bkg" style={ overlayStyles }>
+				<div className="modal" style={ modalStyles }>
+					<div className="title"></div>
+					<div className="modal-data-holder">
+						{this.props.children}
+					</div>
+					<div className="footer"></div>
 				</div>
 			</div>
 		);

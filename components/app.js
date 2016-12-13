@@ -3,22 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from './modal/jsx/modal';
 import {data} from './data';
+import {modal_style, overlay_style} from './modal/styles/modal_styles';
 
-var style = {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 52;
-    width: 600px;
-    height: 251px;
-    display: block;
-    margin: 0;
-    padding: 0;
-    background: aliceblue;
-    overflow: auto;
-    transform: translate(-50%, -50%);
-}
-
-ReactDOM.render( <Modal modalStyles={style}>
+ReactDOM.render( <Modal modalStyles = {modal_style} overlayStyles = {overlay_style}>
 		<li>this is a child element</li>
+        <li>child 2 </li>
+        <li>child 3 </li>
 	</Modal>, document.getElementById('app') );

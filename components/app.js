@@ -6,7 +6,9 @@ import {data} from './data';
 import {modal_style, overlay_style} from './modal/styles/modal_styles';
 
 ReactDOM.render( <Modal modalStyles = {modal_style} overlayStyles = {overlay_style}>
-		<li>this is a child element</li>
-        <li>child 2 </li>
-        <li>child 3 </li>
+		<div style={ modal_style.title_styles }></div>
+		<div style={ modal_style.modal_data }>
+			<p>{data}</p>
+		</div>
+		<div style={ modal_style.footer_styles }></div>
 	</Modal>, document.getElementById('app') );

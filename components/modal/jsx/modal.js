@@ -5,37 +5,38 @@ export default class Modal extends React.Component {
 		super();
 		this.closeModal = this.closeModal.bind(this);
 		this.renderModal = this.renderModal.bind(this);
-		this.renderInput = this.renderInput.bind(this);
 		this.state = {
 			isOpen: true
 		}
 	}
 
 	closeModal(e) {
-		//this.setState({ isOpen: false });
-		console.log('this.state');
+		this.setState({ isOpen: false });
+		console.log("clicked");
 	}
 
 	renderModal() {
-		const { modalStyles, overlayStyles} = this.props;
 
-		return(
-			<div className="modal-bkg" style={ overlayStyles }>
-				<div className="modal" style={ modalStyles.modal }>
-					<input type="button" className="modalClose" style={ modalStyles.modal_close } onClick={() => this.closeModal()} value="✖" />
+		const { modalStyles, overlayStyles} = this.props;
+		
+		let hiddenModalStyle = this.state.isOpen?modalStyles.modal:modalStyles.fade_out;
+		let overlayStylesDynamic = this.state.isOpen?overlayStyles:modalStyles.fade_out_overlay;
+		let containerStylesDynamic = this.state.isOpen?null:modalStyles.fade_modal_container;
+
+		return (
+			<div className="modal-container" style={containerStylesDynamic}>
+				<div className="modal-bkg" style={ overlayStylesDynamic }>
+					<div className="modal" style={ Object.assign(hiddenModalStyle) }>
+						<div className="modalClose" onClick={() => this.closeModal()}>✖</div>
 						{this.props.children}
+					</div>
 				</div>
 			</div>
-		);
-	}
-
-	renderInput() {
-		return <input type="button" onClick={() => this.closeModal()} value="Click Me!" />
+			);
 	}
 	render() {
-		console.log(this.state);
 		return(
-			// this.state?this.renderModal():null
+			// this.state.isOpen?this.renderModal():null
 			this.renderModal()
 			)
 	}

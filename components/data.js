@@ -1,50 +1,11 @@
-export const data = `Get up to $605 Instant Air Credit. Booking Window: Now - Dec. 30, 2016.
+export const data = `
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper nulla eu sollicitudin dignissim. Cras commodo neque et neque luctus, in fringilla nibh pharetra. Nullam et consequat velit, ac blandit augue. Curabitur ultrices lorem mi, vel euismod lectus suscipit quis. Sed condimentum et tortor at hendrerit. Aliquam magna turpis, mattis quis ligula id, consectetur tincidunt lorem. Curabitur maximus lobortis sem, at molestie arcu luctus id. Ut vel diam ut diam vestibulum dictum sed vitae nunc. Proin sodales pretium tellus vitae mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean ut tellus nibh.
 
-For travel now - Dec. 26, 2018.
+Donec ac tristique nunc. Etiam pellentesque tincidunt lorem, vel semper dui aliquam ut. Nulla non iaculis purus. Fusce in scelerisque tellus. Aenean eget augue auctor, commodo massa eget, faucibus enim. Quisque vehicula ut purus sed bibendum. Duis varius, nibh sit amet lacinia tempor, lectus augue semper arcu, id bibendum libero enim sed nisi. Nunc volutpat erat mollis lectus porttitor, pretium posuere neque semper. Praesent commodo malesuada dolor. Integer id purus semper, sollicitudin neque quis, sollicitudin ex. Sed efficitur est purus. Praesent eu porta urna. Proin at porta justo. Nullam efficitur nisi nec mi porttitor, id pharetra enim ornare. Pellentesque nec magna et nunc efficitur tempus et id eros. Ut nulla leo, suscipit ut eleifend ut, tincidunt et eros.
 
-$605 Air Credit on 7-paid nights or longer
-$505 Air Credit on 6-paid nights
-$405 Air Credit on 5-paid nights
-$305 Air Credit on 4-paid nights
-$225 Air Credit on 3-paid nights
+Vestibulum convallis lectus non ornare feugiat. Nunc congue placerat lectus sed hendrerit. Quisque luctus lacinia ipsum. Curabitur volutpat, dolor a fringilla commodo, dui quam hendrerit justo, viverra scelerisque ipsum mi eu lacus. Donec tempus ultrices orci, ut iaculis libero gravida vehicula. Nullam lacinia venenatis sem vitae mattis. Donec lacinia turpis nunc. Duis eu nisi eget diam eleifend gravida.
 
-Blackout Dates: Dec. 27 - 31, 2016 | Dec. 27 - 31, 2017 | Dec. 27 - 31, 2018.
-Air Credit offer is valid for new bookings only.
-For air inclusive bookings, the $605, $505, $405, $305 & $225 Air Credits are in USD, applied to the base fare and excludes government taxes and fees, which must be paid at time of booking and is fully non-refundable.
-Offer is combinable with other Sandals consumer saving promotions.
-Credit vouchers are subject to Terms & Conditions of any promotion and may or may not be combinable.
-Offers are combinable with Sandals Select Rewards Point promotions or WorldPoint redemptions.
-Maximum Sandals Select Point redemption per reservation is 20,000 Sandals Select points valued at $500.00 USD.
-Unique Travel Corp., reserves the right to verify all accounts prior to adjusting reservations. Limit one redemption reservation per member.
-Booking names must match the Sandals Select Membership account or it will be null and void.
-Cancellation of hotel booking will result in cancellation of all associated airline tickets.
-Offers may not be applicable to group bookings.
-All featured prices are in US Dollars.
-Offers are subject to availability throughout promotional period and may be changed or withdrawn at any time. Other restrictions and limitations may apply.
-Not responsible for errors or omissions.
+Suspendisse non ipsum eget diam dignissim tempus. Curabitur eget sem at tortor dictum pharetra. Morbi sit amet metus purus. Cras vel laoreet augue, vel ultrices dolor. Pellentesque vestibulum urna augue, non feugiat risus tempor a. Sed porta eros id dolor euismod volutpat. Cras nec gravida nibh. Nunc posuere malesuada ipsum. Ut placerat urna magna, vel maximus nunc aliquam id. Sed mollis tincidunt tortor at faucibus. Vivamus at felis nunc. Pellentesque eget diam at dolor cursus auctor sed sed nulla. Vivamus tincidunt, ex sed dapibus cursus, velit lectus semper purus, vitae ultrices erat nisi vel eros. Nullam ut massa congue, molestie magna vel, iaculis ipsum. Phasellus tincidunt suscipit lorem. Fusce elementum odio erat, id consequat tortor dictum et.
 
-Get up to $605 Instant Air Credit. Booking Window: Now - Dec. 30, 2016.
-
-For travel now - Dec. 26, 2018.
-
-$605 Air Credit on 7-paid nights or longer
-$505 Air Credit on 6-paid nights
-$405 Air Credit on 5-paid nights
-$305 Air Credit on 4-paid nights
-$225 Air Credit on 3-paid nights
-
-Blackout Dates: Dec. 27 - 31, 2016 | Dec. 27 - 31, 2017 | Dec. 27 - 31, 2018.
-Air Credit offer is valid for new bookings only.
-For air inclusive bookings, the $605, $505, $405, $305 & $225 Air Credits are in USD, applied to the base fare and excludes government taxes and fees, which must be paid at time of booking and is fully non-refundable.
-Offer is combinable with other Sandals consumer saving promotions.
-Credit vouchers are subject to Terms & Conditions of any promotion and may or may not be combinable.
-Offers are combinable with Sandals Select Rewards Point promotions or WorldPoint redemptions.
-Maximum Sandals Select Point redemption per reservation is 20,000 Sandals Select points valued at $500.00 USD.
-Unique Travel Corp., reserves the right to verify all accounts prior to adjusting reservations. Limit one redemption reservation per member.
-Booking names must match the Sandals Select Membership account or it will be null and void.
-Cancellation of hotel booking will result in cancellation of all associated airline tickets.
-Offers may not be applicable to group bookings.
-All featured prices are in US Dollars.
-Offers are subject to availability throughout promotional period and may be changed or withdrawn at any time. Other restrictions and limitations may apply.
-Not responsible for errors or omissions.
+Nullam ut elementum mi, ac porta libero. Suspendisse porttitor, tortor vel ullamcorper aliquet, dolor tellus pulvinar leo, ut vulputate leo dolor in lorem. Donec vel ligula ipsum. Morbi eget libero id libero tempor lacinia id pulvinar nisi. Phasellus volutpat leo eu massa faucibus, eget interdum turpis finibus. Praesent vitae viverra ipsum. Curabitur a erat sollicitudin, bibendum justo non, euismod neque. Aliquam vel elit vehicula, faucibus enim sit amet, posuere massa. Nulla ac viverra mauris. Etiam ultrices ultrices sapien, nec luctus nisi tristique at. Nunc gravida facilisis lacus non finibus. Nulla et sapien sit amet justo vehicula lobortis. Aliquam et lorem sed libero bibendum ultrices quis nec ligula.
 `;

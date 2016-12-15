@@ -1,6 +1,14 @@
-div {
-  position: absolute;
-  &:after {
-    z-index: 3;
-  }
+.mdl-overlay{
+	top: 0;
+	left: 0;
+	position: fixed;
+	height:100%;
+	width: 100%;
+	background-color: #373A47;
+	.mdl {
+		padding-right: .4rem;
+		padding-left: .4rem;
+		overflow: auto;
+		background-color: white;
+	}
 }

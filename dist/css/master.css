@@ -1,2 +1,2 @@
-div{position:absolute}div:after{z-index:1}
+.mdl-overlay{top:0;left:0;position:fixed;height:100%;width:100%;background-color:#373a47}.mdl-overlay .mdl{padding-right:.4rem;padding-left:.4rem;overflow:auto;background-color:#fff}
 /*# sourceMappingURL=maps/master.css.map */

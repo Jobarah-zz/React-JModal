@@ -32,17 +32,14 @@ export default class Modal extends React.Component {
 	renderModal() {
 
 		const { modalStyles, overlayStyles} = this.props;
-		let hiddenModalStyle = this.state.isOpen ? modalStyles.modal : modalStyles.fade_out;
+		// let hiddenModalStyle = this.state.isOpen ? modalStyles.modal : modalStyles.fade_out;
 		let overlayStylesDynamic = this.state.isOpen ? overlayStyles : modalStyles.fade_out_overlay;
 		let containerStylesDynamic = this.state.isOpen ? null : modalStyles.fade_modal_container;
 
 		return (
-			<div className="modal-container" style={containerStylesDynamic}>
-				<div className="modal-bkg" style={ overlayStylesDynamic }>
-					<div className="modal" style={ Object.assign(hiddenModalStyle) }>
-						<div className="modalClose" onClick={() => this.closeModal()}>✖</div>
-						{this.props.children}
-					</div>
+			<div className="mdl-overlay" style={ overlayStylesDynamic }>
+				<div className="mdl" style={ modalStyles.mdl }>
+					{this.props.children}
 				</div>
 			</div>
 			);

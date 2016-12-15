@@ -1,0 +1,6 @@
+div {
+  position: absolute;
+  &:after {
+    z-index: 3;
+  }
+}

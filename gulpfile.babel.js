@@ -24,7 +24,7 @@
         isWatchify: false,
         deps: [] // Here would go global modules. E.G.: ['react', 'react-dom']
     };
-    internals.static = __dirname + '/static';
+    internals.static = __dirname;
     internals.src = internals.static + '/src';
 
 // SASS Task ================================
@@ -44,7 +44,7 @@
             }))
             .pipe(sourcemaps.init())
             .pipe(sourcemaps.write('./maps'))
-            .pipe(gulp.dest(internals.static + '/css/'));
+            .pipe(gulp.dest(internals.static + '/dist/css/'));
     });
 
 // JS Tasks =====================================
@@ -108,7 +108,7 @@
     gulp.task('scripts', (callback) => {
 
         const mainFiles = [`${internals.src}/js/app.js`];
-        glob(`${internals.src}/js/views/*/*.js`, (err, files) => {
+        glob(`${internals.src}/js/*/*.js`, (err, files) => {
 
             if (err) {
                 done(err);
@@ -119,7 +119,7 @@
             const tasks = files.map(function (entry, index) {
                 entry = path.normalize(entry);
                 const origin = path.normalize(`${ internals.src }/js`);
-                const dest = path.normalize(`${ internals.static }/js`);
+                const dest = path.normalize(`${ internals.static }/dist/js`);
                 const destMapping = entry.replace(origin, dest);
                 const destination = path.dirname(destMapping);
 

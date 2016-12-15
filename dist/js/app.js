@@ -20458,27 +20458,31 @@ var Modal = function (_React$Component) {
 
 	(0, _createClass3.default)(Modal, [{
 		key: "closeModal",
-		value: function closeModal(e) {
+		value: function closeModal() {
 
 			this.setState({ isOpen: false });
+			console.log(this.state.isOpen);
 		}
 	}, {
 		key: "renderModal",
 		value: function renderModal() {
+			var _this2 = this;
+
 			var _props = this.props,
 			    modalStyles = _props.modalStyles,
 			    overlayStyles = _props.overlayStyles;
-			// let hiddenModalStyle = this.state.isOpen ? modalStyles.modal : modalStyles.fade_out;
 
-			var overlayStylesDynamic = this.state.isOpen ? overlayStyles : modalStyles.fade_out_overlay;
-			var containerStylesDynamic = this.state.isOpen ? null : modalStyles.fade_modal_container;
+			var _modalStyles = this.state.isOpen ? modalStyles.mdl : modalStyles.fade_out;
+			var _overlayStyles = this.state.isOpen ? overlayStyles : modalStyles.fade_out_overlay;
 
 			return _react2.default.createElement(
 				"div",
-				{ className: "mdl-overlay", style: overlayStylesDynamic },
+				{ className: "mdl-overlay", style: _overlayStyles, onClick: function onClick() {
+						return _this2.closeModal();
+					} },
 				_react2.default.createElement(
 					"div",
-					{ className: "mdl", style: modalStyles.mdl },
+					{ className: "mdl", style: _modalStyles },
 					this.props.children
 				)
 			);

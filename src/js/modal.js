@@ -24,21 +24,21 @@ export default class Modal extends React.Component {
 		}
 	}
 
-	closeModal(e) {
+	closeModal() {
 
 		this.setState({ isOpen: false });
+		console.log(this.state.isOpen);
 	}
 
 	renderModal() {
 
 		const { modalStyles, overlayStyles} = this.props;
-		// let hiddenModalStyle = this.state.isOpen ? modalStyles.modal : modalStyles.fade_out;
-		let overlayStylesDynamic = this.state.isOpen ? overlayStyles : modalStyles.fade_out_overlay;
-		let containerStylesDynamic = this.state.isOpen ? null : modalStyles.fade_modal_container;
+		const _modalStyles = this.state.isOpen ? modalStyles.mdl : modalStyles.fade_out;
+		const _overlayStyles = this.state.isOpen ? overlayStyles : modalStyles.fade_out_overlay;
 
 		return (
-			<div className="mdl-overlay" style={ overlayStylesDynamic }>
-				<div className="mdl" style={ modalStyles.mdl }>
+			<div className="mdl-overlay" style={ _overlayStyles } onClick={() => this.closeModal()}>
+				<div className="mdl" style={ _modalStyles }>
 					{this.props.children}
 				</div>
 			</div>

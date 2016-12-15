@@ -2,6 +2,7 @@
     import gulp from 'gulp';
     import sourcemaps from 'gulp-sourcemaps';
     import gutil from 'gulp-util';
+    import connect from 'gulp-connect';
 
     //== SASS
     import sass from 'gulp-sass';
@@ -44,7 +45,8 @@
             }))
             .pipe(sourcemaps.init())
             .pipe(sourcemaps.write('./maps'))
-            .pipe(gulp.dest(internals.static + '/dist/css/'));
+            .pipe(gulp.dest(internals.static + '/dist/css/'))
+            .pipe(connect.reload());
     });
 
 // JS Tasks =====================================
@@ -79,7 +81,8 @@
                 .pipe(buffer())
                 .pipe(sourcemaps.init({ loadMaps: true }))
                 .pipe(sourcemaps.write('./maps'))
-                .pipe(gulp.dest(options.destination));
+                .pipe(gulp.dest(options.destination))
+                .pipe(connect.reload());
         };
 
         if (internals.isWatchify) {
@@ -133,6 +136,15 @@
         return callback();
     });
 
+    //== Gulp Connect::Server task
+    gulp.task('connect', () => {
+        connect.server({
+        port: 3000,
+        root: './',
+        livereload: true
+      });
+    });
+
 
 // Watch Tasks ==================================
     gulp.task('watch', () => {
@@ -142,4 +154,4 @@
     });
 
 // Main Tasks ===================================
-    gulp.task('default', ['sass', 'scripts', 'watch']);
+    gulp.task('default', ['connect', 'sass', 'scripts', 'watch']);

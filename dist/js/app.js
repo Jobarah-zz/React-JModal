@@ -20461,7 +20461,6 @@ var Modal = function (_React$Component) {
 		value: function closeModal() {
 
 			this.setState({ isOpen: false });
-			console.log(this.state.isOpen);
 		}
 	}, {
 		key: "renderModal",
@@ -20475,15 +20474,21 @@ var Modal = function (_React$Component) {
 			var _modalStyles = this.state.isOpen ? modalStyles.mdl : modalStyles.fade_out;
 			var _overlayStyles = this.state.isOpen ? overlayStyles : modalStyles.fade_out_overlay;
 
+			var cotainerClass = this.state.isOpen ? "mdl-container mdl-sh" : "mdl-container mdl-sh out";
+
 			return _react2.default.createElement(
 				"div",
-				{ className: "mdl-overlay", style: _overlayStyles, onClick: function onClick() {
-						return _this2.closeModal();
-					} },
+				{ className: cotainerClass },
 				_react2.default.createElement(
 					"div",
-					{ className: "mdl", style: _modalStyles },
-					this.props.children
+					{ className: "mdl-overlay", style: _overlayStyles, onClick: function onClick() {
+							return _this2.closeModal();
+						} },
+					_react2.default.createElement(
+						"div",
+						{ className: "mdl" },
+						this.props.children
+					)
 				)
 			);
 		}
@@ -20491,10 +20496,7 @@ var Modal = function (_React$Component) {
 		key: "render",
 		value: function render() {
 
-			return (
-				// this.state.isOpen?this.renderModal():null
-				this.renderModal()
-			);
+			return this.renderModal();
 		}
 	}]);
 	return Modal;
@@ -20524,12 +20526,9 @@ var modalStyle = exports.modalStyle = {
         top: '50%',
         left: '50%',
         zIndex: '52',
-        width: '33.3%',
-        height: '33.3%',
         display: 'block',
         margin: '0',
-        transform: 'translate(-50%, -50%)',
-        borderRadius: '2% 0'
+        transform: 'translate(-50%, -50%)'
     }
 };
 

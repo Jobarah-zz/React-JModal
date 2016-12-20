@@ -27,7 +27,6 @@ export default class Modal extends React.Component {
 	closeModal() {
 
 		this.setState({ isOpen: false });
-		console.log(this.state.isOpen);
 	}
 
 	renderModal() {
@@ -36,11 +35,16 @@ export default class Modal extends React.Component {
 		const _modalStyles = this.state.isOpen ? modalStyles.mdl : modalStyles.fade_out;
 		const _overlayStyles = this.state.isOpen ? overlayStyles : modalStyles.fade_out_overlay;
 
+        const cotainerClass = this.state.isOpen ? "mdl-container mdl-sh" : "mdl-container mdl-sh out";
+
 		return (
-			<div className="mdl-overlay" style={ _overlayStyles } onClick={() => this.closeModal()}>
-				<div className="mdl" style={ _modalStyles }>
-					{this.props.children}
-				</div>
+            <div className={cotainerClass}>
+
+                <div className="mdl-overlay" style={ _overlayStyles } onClick={() => this.closeModal()} >
+                    <div className="mdl" >
+                        {this.props.children}
+                    </div>
+                </div>
 			</div>
 			);
 	}
@@ -48,7 +52,6 @@ export default class Modal extends React.Component {
 	render() {
 
 		return (
-			// this.state.isOpen?this.renderModal():null
 			this.renderModal()
 		);
 	}

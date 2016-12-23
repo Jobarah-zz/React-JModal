@@ -20408,33 +20408,33 @@ _reactDom2.default.render(_react2.default.createElement(
 ), document.getElementById('app'));
 
 },{"../data":245,"../sass/modal_styles":248,"./modal":247,"react":244,"react-dom":115}],247:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _getPrototypeOf = require("babel-runtime/core-js/object/get-prototype-of");
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = require("babel-runtime/helpers/createClass");
+var _createClass2 = require('babel-runtime/helpers/createClass');
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = require("babel-runtime/helpers/possibleConstructorReturn");
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = require("babel-runtime/helpers/inherits");
+var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -20457,13 +20457,14 @@ var Modal = function (_React$Component) {
 	}
 
 	(0, _createClass3.default)(Modal, [{
-		key: "closeModal",
+		key: 'closeModal',
 		value: function closeModal() {
 
 			this.setState({ isOpen: false });
+			console.log('clicked');
 		}
 	}, {
-		key: "renderModal",
+		key: 'renderModal',
 		value: function renderModal() {
 			var _this2 = this;
 
@@ -20477,23 +20478,20 @@ var Modal = function (_React$Component) {
 			var cotainerClass = this.state.isOpen ? "mdl-container mdl-sh" : "mdl-container mdl-sh out";
 
 			return _react2.default.createElement(
-				"div",
+				'div',
 				{ className: cotainerClass },
+				_react2.default.createElement('div', { className: 'mdl-overlay', style: _overlayStyles, onClick: function onClick() {
+						return _this2.closeModal();
+					} }),
 				_react2.default.createElement(
-					"div",
-					{ className: "mdl-overlay", style: _overlayStyles, onClick: function onClick() {
-							return _this2.closeModal();
-						} },
-					_react2.default.createElement(
-						"div",
-						{ className: "mdl" },
-						this.props.children
-					)
+					'div',
+					{ className: 'mdl' },
+					this.props.children
 				)
 			);
 		}
 	}, {
-		key: "render",
+		key: 'render',
 		value: function render() {
 
 			return this.renderModal();

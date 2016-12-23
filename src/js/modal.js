@@ -27,6 +27,7 @@ export default class Modal extends React.Component {
 	closeModal() {
 
 		this.setState({ isOpen: false });
+		console.log('clicked');
 	}
 
 	renderModal() {
@@ -39,11 +40,9 @@ export default class Modal extends React.Component {
 
 		return (
             <div className={cotainerClass}>
-
-                <div className="mdl-overlay" style={ _overlayStyles } onClick={() => this.closeModal()} >
-                    <div className="mdl" >
-                        {this.props.children}
-                    </div>
+                <div className="mdl-overlay" style={ _overlayStyles } onClick={() => this.closeModal()} />
+                <div className="mdl" >
+                    {this.props.children}
                 </div>
 			</div>
 			);

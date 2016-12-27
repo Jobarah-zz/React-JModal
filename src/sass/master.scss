@@ -27,14 +27,14 @@
     background: white;
     z-index: 9000;
     overflow: auto;
-    animation: moveIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    animation: moveIn .5s cubic-bezier(.42,0,.58,1) forwards;
   }
     &.out {
       .mdl-overlay {
-        animation: overlayOut 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        animation: overlayOut .5s cubic-bezier(.42,0,.58,1) forwards;
       }
       .mdl {
-        animation: moveOut 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        animation: moveOut .5s cubic-bezier(.42,0,.58,1) forwards;
       }
   }
 }

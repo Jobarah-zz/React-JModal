@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactJModal from './modal';
+import ReactJModal from './ReactJModal';
 import {data} from '../data';
 import {modalStyles} from '../sass/modal_styles';
 

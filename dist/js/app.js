@@ -20373,41 +20373,6 @@ var data = exports.data = "\nLorem ipsum dolor sit amet, consectetur adipiscing 
 },{}],246:[function(require,module,exports){
 'use strict';
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = require('react-dom');
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _modal = require('./modal');
-
-var _modal2 = _interopRequireDefault(_modal);
-
-var _data = require('../data');
-
-var _modal_styles = require('../sass/modal_styles');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_reactDom2.default.render(_react2.default.createElement(
-	_modal2.default,
-	{ modalStyles: _modal_styles.modalStyles },
-	_react2.default.createElement(
-		'div',
-		null,
-		_react2.default.createElement(
-			'p',
-			null,
-			_data.data
-		)
-	)
-), document.getElementById('app'));
-
-},{"../data":245,"../sass/modal_styles":248,"./modal":247,"react":244,"react-dom":115}],247:[function(require,module,exports){
-'use strict';
-
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -20524,7 +20489,42 @@ ReactJModal.defaultProps = {
 };
 exports.default = ReactJModal;
 
-},{"babel-runtime/core-js/object/get-prototype-of":3,"babel-runtime/helpers/classCallCheck":7,"babel-runtime/helpers/createClass":8,"babel-runtime/helpers/inherits":9,"babel-runtime/helpers/possibleConstructorReturn":10,"react":244}],248:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":3,"babel-runtime/helpers/classCallCheck":7,"babel-runtime/helpers/createClass":8,"babel-runtime/helpers/inherits":9,"babel-runtime/helpers/possibleConstructorReturn":10,"react":244}],247:[function(require,module,exports){
+'use strict';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _ReactJModal = require('./ReactJModal');
+
+var _ReactJModal2 = _interopRequireDefault(_ReactJModal);
+
+var _data = require('../data');
+
+var _modal_styles = require('../sass/modal_styles');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_reactDom2.default.render(_react2.default.createElement(
+	_ReactJModal2.default,
+	{ modalStyles: _modal_styles.modalStyles },
+	_react2.default.createElement(
+		'div',
+		null,
+		_react2.default.createElement(
+			'p',
+			null,
+			_data.data
+		)
+	)
+), document.getElementById('app'));
+
+},{"../data":245,"../sass/modal_styles":248,"./ReactJModal":246,"react":244,"react-dom":115}],248:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20540,7 +20540,7 @@ var modalStyles = exports.modalStyles = {
     }
 };
 
-},{}]},{},[246])
+},{}]},{},[247])
 
 
 //# sourceMappingURL=maps/app.js.map

@@ -20457,8 +20457,6 @@ var ReactJModal = function (_React$Component) {
                 { className: cotainerClass },
                 _react2.default.createElement('div', { className: 'mdl-overlay', style: _overlayStyles, onClick: function onClick() {
                         return _this2.closeModal();
-                    }, onKeyDown: function onKeyDown(e) {
-                        return _this2.handleKeyPress(e);
                     } }),
                 _react2.default.createElement(
                     'div',

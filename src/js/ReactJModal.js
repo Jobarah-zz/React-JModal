@@ -50,7 +50,7 @@ export default class ReactJModal extends React.Component {
 
         return (
             <div className={cotainerClass}>
-                <div className="mdl-overlay" style={ _overlayStyles } onClick={() => this.closeModal()}  onKeyDown={(e) => this.handleKeyPress(e)}/>
+                <div className="mdl-overlay" style={ _overlayStyles } onClick={() => this.closeModal()}/>
                 <div className="mdl" style={ _modalStyles }>
                     {this.props.children}
                 </div>

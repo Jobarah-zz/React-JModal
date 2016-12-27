@@ -20394,7 +20394,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _reactDom2.default.render(_react2.default.createElement(
 	_modal2.default,
 	{ modalStyles: _modal_styles.modalStyles },
-	_react2.default.createElement('div', null),
 	_react2.default.createElement(
 		'div',
 		null,
@@ -20403,8 +20402,7 @@ _reactDom2.default.render(_react2.default.createElement(
 			null,
 			_data.data
 		)
-	),
-	_react2.default.createElement('div', null)
+	)
 ), document.getElementById('app'));
 
 },{"../data":245,"../sass/modal_styles":248,"./modal":247,"react":244,"react-dom":115}],247:[function(require,module,exports){

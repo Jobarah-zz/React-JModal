@@ -31,10 +31,10 @@
   }
     &.out {
       .mdl-overlay {
-        animation: overlayOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        animation: overlayOut 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
       }
       .mdl {
-        animation: moveOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        animation: moveOut 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
       }
   }
 }

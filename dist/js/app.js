@@ -20469,7 +20469,7 @@ var Modal = function (_React$Component) {
     }, {
         key: 'handleKeyPress',
         value: function handleKeyPress(event) {
-            if (event.keyCode === 27) {
+            if (event.keyCode === 27 && this.state.isOpen) {
                 this.closeModal();
             }
         }

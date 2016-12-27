@@ -20438,13 +20438,13 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Modal = function (_React$Component) {
-    (0, _inherits3.default)(Modal, _React$Component);
+var ReactJModal = function (_React$Component) {
+    (0, _inherits3.default)(ReactJModal, _React$Component);
 
-    function Modal() {
-        (0, _classCallCheck3.default)(this, Modal);
+    function ReactJModal() {
+        (0, _classCallCheck3.default)(this, ReactJModal);
 
-        var _this = (0, _possibleConstructorReturn3.default)(this, (Modal.__proto__ || (0, _getPrototypeOf2.default)(Modal)).call(this));
+        var _this = (0, _possibleConstructorReturn3.default)(this, (ReactJModal.__proto__ || (0, _getPrototypeOf2.default)(ReactJModal)).call(this));
 
         _this.closeModal = _this.closeModal.bind(_this);
         _this.renderModal = _this.renderModal.bind(_this);
@@ -20455,7 +20455,7 @@ var Modal = function (_React$Component) {
         return _this;
     }
 
-    (0, _createClass3.default)(Modal, [{
+    (0, _createClass3.default)(ReactJModal, [{
         key: 'componentWillMount',
         value: function componentWillMount() {
             document.addEventListener('keydown', this.handleKeyPress);
@@ -20509,20 +20509,20 @@ var Modal = function (_React$Component) {
             return this.renderModal();
         }
     }]);
-    return Modal;
+    return ReactJModal;
 }(_react2.default.Component);
 
-Modal.propTypes = {
+ReactJModal.propTypes = {
     modalStyles: _react2.default.PropTypes.object,
     overlayStyles: _react2.default.PropTypes.object,
     isOpen: _react2.default.PropTypes.bool
 };
-Modal.defaultProps = {
+ReactJModal.defaultProps = {
     modalStyles: {},
     overlayStyles: {},
     isOpen: false
 };
-exports.default = Modal;
+exports.default = ReactJModal;
 
 },{"babel-runtime/core-js/object/get-prototype-of":3,"babel-runtime/helpers/classCallCheck":7,"babel-runtime/helpers/createClass":8,"babel-runtime/helpers/inherits":9,"babel-runtime/helpers/possibleConstructorReturn":10,"react":244}],248:[function(require,module,exports){
 'use strict';

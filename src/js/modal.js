@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Modal extends React.Component {
+export default class ReactJModal extends React.Component {
 
     static propTypes = {
         modalStyles: React.PropTypes.object,

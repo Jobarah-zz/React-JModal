@@ -1,11 +1,9 @@
-export const modalStyle = {
+export const modalStyles = {
     mdl: {
         position: 'absolute',
         top: '50%',
         left: '50%',
-        zIndex: '52',
-        display: 'block',
-        margin: '0',
+        zIndex: '9000',
         transform: 'translate(-50%, -50%)'
     }
 };

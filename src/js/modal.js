@@ -2,56 +2,66 @@ import React from 'react';
 
 export default class Modal extends React.Component {
 
-	static propTypes = {
-		modalStyles: React.PropTypes.object,
-		overlayStyles: React.PropTypes.object,
-		isOpen: React.PropTypes.bool
-	};
+    static propTypes = {
+        modalStyles: React.PropTypes.object,
+        overlayStyles: React.PropTypes.object,
+        isOpen: React.PropTypes.bool
+    };
 
-	static defaultProps = {
-		modalStyles: {},
-		overlayStyles: {},
-		isOpen: false
-	};
+    static defaultProps = {
+        modalStyles: {},
+        overlayStyles: {},
+        isOpen: false
+    };
 
-	constructor() {
+    constructor() {
 
-		super();
-		this.closeModal = this.closeModal.bind(this);
-		this.renderModal = this.renderModal.bind(this);
-		this.state = {
-			isOpen: true
-		}
-	}
+        super();
+        this.closeModal = this.closeModal.bind(this);
+        this.renderModal = this.renderModal.bind(this);
+        this.handleKeyPress = this.handleKeyPress.bind(this);
+        this.state = {
+            isOpen: true
+        };
+    }
 
-	closeModal() {
+    componentWillMount() {
+        document.addEventListener('keydown', this.handleKeyPress);
+    }
 
-		this.setState({ isOpen: false });
-		console.log('clicked');
-	}
+    closeModal() {
 
-	renderModal() {
+        this.setState({ isOpen: false });
+    }
 
-		const { modalStyles, overlayStyles} = this.props;
-		const _modalStyles = this.state.isOpen ? modalStyles.mdl : modalStyles.fade_out;
-		const _overlayStyles = this.state.isOpen ? overlayStyles : modalStyles.fade_out_overlay;
+    handleKeyPress(event) {
+        if(event.keyCode === 27) {
+            this.closeModal();
+        }
+    }
 
-        const cotainerClass = this.state.isOpen ? "mdl-container mdl-sh" : "mdl-container mdl-sh out";
+    renderModal() {
 
-		return (
+        const { modalStyles, overlayStyles } = this.props;
+        const _modalStyles = this.state.isOpen ? modalStyles.mdl : modalStyles.mdlOut;
+        const _overlayStyles = this.state.isOpen ? overlayStyles : modalStyles.overlayOut;
+
+        const cotainerClass = this.state.isOpen ? 'mdl-container' : 'mdl-container out';
+
+        return (
             <div className={cotainerClass}>
-                <div className="mdl-overlay" style={ _overlayStyles } onClick={() => this.closeModal()} />
-                <div className="mdl" >
+                <div className="mdl-overlay" style={ _overlayStyles } onClick={() => this.closeModal()}  onKeyDown={(e) => this.handleKeyPress(e)}/>
+                <div className="mdl" style={ _modalStyles }>
                     {this.props.children}
                 </div>
-			</div>
-			);
-	}
+            </div>
+        );
+    }
 
-	render() {
+    render() {
 
-		return (
-			this.renderModal()
-		);
-	}
+        return (
+            this.renderModal()
+        );
+    }
 }

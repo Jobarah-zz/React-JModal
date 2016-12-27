@@ -3,9 +3,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from './modal';
 import {data} from '../data';
-import {modalStyle} from '../sass/modal_styles';
+import {modalStyles} from '../sass/modal_styles';
 
-ReactDOM.render( <Modal modalStyles = {modalStyle}>
+ReactDOM.render( <Modal modalStyles = {modalStyles}>
 		<div/>
 		<div>
 			<p>{data}</p>

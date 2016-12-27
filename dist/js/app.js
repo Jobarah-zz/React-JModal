@@ -20393,7 +20393,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _reactDom2.default.render(_react2.default.createElement(
 	_modal2.default,
-	{ modalStyles: _modal_styles.modalStyle },
+	{ modalStyles: _modal_styles.modalStyles },
 	_react2.default.createElement('div', null),
 	_react2.default.createElement(
 		'div',
@@ -20411,7 +20411,7 @@ _reactDom2.default.render(_react2.default.createElement(
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+    value: true
 });
 
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
@@ -20441,74 +20441,88 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Modal = function (_React$Component) {
-	(0, _inherits3.default)(Modal, _React$Component);
+    (0, _inherits3.default)(Modal, _React$Component);
 
-	function Modal() {
-		(0, _classCallCheck3.default)(this, Modal);
+    function Modal() {
+        (0, _classCallCheck3.default)(this, Modal);
 
-		var _this = (0, _possibleConstructorReturn3.default)(this, (Modal.__proto__ || (0, _getPrototypeOf2.default)(Modal)).call(this));
+        var _this = (0, _possibleConstructorReturn3.default)(this, (Modal.__proto__ || (0, _getPrototypeOf2.default)(Modal)).call(this));
 
-		_this.closeModal = _this.closeModal.bind(_this);
-		_this.renderModal = _this.renderModal.bind(_this);
-		_this.state = {
-			isOpen: true
-		};
-		return _this;
-	}
+        _this.closeModal = _this.closeModal.bind(_this);
+        _this.renderModal = _this.renderModal.bind(_this);
+        _this.handleKeyPress = _this.handleKeyPress.bind(_this);
+        _this.state = {
+            isOpen: true
+        };
+        return _this;
+    }
 
-	(0, _createClass3.default)(Modal, [{
-		key: 'closeModal',
-		value: function closeModal() {
+    (0, _createClass3.default)(Modal, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            document.addEventListener('keydown', this.handleKeyPress);
+        }
+    }, {
+        key: 'closeModal',
+        value: function closeModal() {
 
-			this.setState({ isOpen: false });
-			console.log('clicked');
-		}
-	}, {
-		key: 'renderModal',
-		value: function renderModal() {
-			var _this2 = this;
+            this.setState({ isOpen: false });
+        }
+    }, {
+        key: 'handleKeyPress',
+        value: function handleKeyPress(event) {
+            if (event.keyCode === 27) {
+                this.closeModal();
+            }
+        }
+    }, {
+        key: 'renderModal',
+        value: function renderModal() {
+            var _this2 = this;
 
-			var _props = this.props,
-			    modalStyles = _props.modalStyles,
-			    overlayStyles = _props.overlayStyles;
+            var _props = this.props,
+                modalStyles = _props.modalStyles,
+                overlayStyles = _props.overlayStyles;
 
-			var _modalStyles = this.state.isOpen ? modalStyles.mdl : modalStyles.fade_out;
-			var _overlayStyles = this.state.isOpen ? overlayStyles : modalStyles.fade_out_overlay;
+            var _modalStyles = this.state.isOpen ? modalStyles.mdl : modalStyles.mdlOut;
+            var _overlayStyles = this.state.isOpen ? overlayStyles : modalStyles.overlayOut;
 
-			var cotainerClass = this.state.isOpen ? "mdl-container mdl-sh" : "mdl-container mdl-sh out";
+            var cotainerClass = this.state.isOpen ? 'mdl-container' : 'mdl-container out';
 
-			return _react2.default.createElement(
-				'div',
-				{ className: cotainerClass },
-				_react2.default.createElement('div', { className: 'mdl-overlay', style: _overlayStyles, onClick: function onClick() {
-						return _this2.closeModal();
-					} }),
-				_react2.default.createElement(
-					'div',
-					{ className: 'mdl' },
-					this.props.children
-				)
-			);
-		}
-	}, {
-		key: 'render',
-		value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: cotainerClass },
+                _react2.default.createElement('div', { className: 'mdl-overlay', style: _overlayStyles, onClick: function onClick() {
+                        return _this2.closeModal();
+                    }, onKeyDown: function onKeyDown(e) {
+                        return _this2.handleKeyPress(e);
+                    } }),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'mdl', style: _modalStyles },
+                    this.props.children
+                )
+            );
+        }
+    }, {
+        key: 'render',
+        value: function render() {
 
-			return this.renderModal();
-		}
-	}]);
-	return Modal;
+            return this.renderModal();
+        }
+    }]);
+    return Modal;
 }(_react2.default.Component);
 
 Modal.propTypes = {
-	modalStyles: _react2.default.PropTypes.object,
-	overlayStyles: _react2.default.PropTypes.object,
-	isOpen: _react2.default.PropTypes.bool
+    modalStyles: _react2.default.PropTypes.object,
+    overlayStyles: _react2.default.PropTypes.object,
+    isOpen: _react2.default.PropTypes.bool
 };
 Modal.defaultProps = {
-	modalStyles: {},
-	overlayStyles: {},
-	isOpen: false
+    modalStyles: {},
+    overlayStyles: {},
+    isOpen: false
 };
 exports.default = Modal;
 
@@ -20518,14 +20532,12 @@ exports.default = Modal;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var modalStyle = exports.modalStyle = {
+var modalStyles = exports.modalStyles = {
     mdl: {
         position: 'absolute',
         top: '50%',
         left: '50%',
-        zIndex: '52',
-        display: 'block',
-        margin: '0',
+        zIndex: '9000',
         transform: 'translate(-50%, -50%)'
     }
 };

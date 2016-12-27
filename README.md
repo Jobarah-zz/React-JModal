@@ -1,3 +1,3 @@
 # React-JModal
 
-project made with the purpose to create modular, independant and reusable react components
+Simple and minimlistic react modal, open to escalability and manipulation to be as flexible as desired

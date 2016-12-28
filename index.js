@@ -1,1 +1,1 @@
-module.exports = require('./dist/ReactJModal');
+module.exports = require('./dist/js/ReactJModal');

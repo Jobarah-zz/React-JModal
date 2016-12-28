@@ -45,7 +45,7 @@
             }))
             .pipe(sourcemaps.init())
             .pipe(sourcemaps.write('./maps'))
-            .pipe(gulp.dest(internals.static + '/dist/css/'))
+            .pipe(gulp.dest(internals.static))
             .pipe(connect.reload());
     });
 
@@ -122,7 +122,7 @@
             const tasks = files.map(function (entry, index) {
                 entry = path.normalize(entry);
                 const origin = path.normalize(`${ internals.src }/js`);
-                const dest = path.normalize(`${ internals.static }/dist/js`);
+                const dest = path.normalize(`${ internals.static }`);
                 const destMapping = entry.replace(origin, dest);
                 const destination = path.dirname(destMapping);
 

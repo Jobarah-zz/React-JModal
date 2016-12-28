@@ -9,4 +9,4 @@ ReactDOM.render( <ReactJModal modalStyles = {modalStyles}>
 		<div>
 			<p>{data}</p>
 		</div>
-	</ReactJModal>, document.getElementById('app') );
+	</ReactJModal>, document.getElementById('app'));

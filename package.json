@@ -2,7 +2,7 @@
   "name": "react-jmodal",
   "version": "1.3.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

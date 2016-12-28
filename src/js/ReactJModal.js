@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class ReactJModal extends React.Component {
+class ReactJModal extends React.Component {
 
     static propTypes = {
         modalStyles: React.PropTypes.object,
@@ -65,3 +65,5 @@ export default class ReactJModal extends React.Component {
         );
     }
 }
+
+module.exports = ReactJModal;

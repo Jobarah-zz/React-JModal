@@ -20360,10 +20360,6 @@ module.exports = require('./lib/React');
 },{"./lib/React":138}],244:[function(require,module,exports){
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -20472,6 +20468,8 @@ ReactJModal.defaultProps = {
     overlayStyles: {},
     isOpen: false
 };
+
+
 module.exports = ReactJModal;
 
 },{"babel-runtime/core-js/object/get-prototype-of":3,"babel-runtime/helpers/classCallCheck":7,"babel-runtime/helpers/createClass":8,"babel-runtime/helpers/inherits":9,"babel-runtime/helpers/possibleConstructorReturn":10,"react":243}]},{},[244])

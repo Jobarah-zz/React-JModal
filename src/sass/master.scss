@@ -34,9 +34,11 @@
     &.out {
       .mdl-overlay {
         animation: overlayOut .5s cubic-bezier(.42,0,.58,1) forwards;
+        z-index: -9000;
       }
       .mdl {
         animation: moveOut .5s cubic-bezier(.42,0,.58,1) forwards;
+        z-index: -9000;
       }
   }
 }

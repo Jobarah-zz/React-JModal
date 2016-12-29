@@ -76,3 +76,13 @@
       }
     }
 }
+
+@media screen and (max-device-width: 1000px) 
+              and (orientation:landscape){
+  body {
+    .contents {
+      width: 55%;
+      height: 55%;
+    }
+  }
+}

@@ -57,5 +57,9 @@
     "modal",
     "react-components",
     "react"
-  ]
+  ],
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/Jobarah/React-JModal.git"
+  }
 }

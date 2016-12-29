@@ -87,3 +87,13 @@
   }
 }
 
+@media screen and (max-device-width: 414px) 
+              and (orientation:portrait){
+  body {
+    .contents {
+      width: 75%;
+      height: 60%;
+    }
+  }
+}
+

@@ -34,7 +34,6 @@
     animation: moveIn .5s cubic-bezier(.42,0,.58,1) forwards;
   }
     &.out {
-      z-index: 0;
       .mdl-overlay {
         animation: overlayOut .5s cubic-bezier(.42,0,.58,1) forwards;
         z-index: -9000;
@@ -42,6 +41,9 @@
       .mdl {
         animation: moveOut .5s cubic-bezier(.42,0,.58,1) forwards;
         z-index: -9000;
+        & {
+          z-index: -1;
+        }
       }
   }
 }
@@ -78,6 +80,7 @@
   }
   100% {
     opacity: 0;
+    z-index: -20;
   }
 }
 

@@ -9,6 +9,7 @@
     height: 4rem;
     width: 100%;
     background-color: #26A65B;
+    border-bottom: .5rem solid #36D7B7;
   }
   .contents {
     position: absolute;
@@ -31,6 +32,13 @@
     top: 50%;
     margin-top: -1rem;
     text-align: -webkit-center;
+    .name {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+    }
   }
 .footer {
     position: absolute;

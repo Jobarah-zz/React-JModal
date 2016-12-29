@@ -17,10 +17,10 @@ export const modalStyles = {
 
 ```  
 The Object contains 4 keys:  
-*mdl  
-*mdlOut  
-*overlay  
-*overlayOut  
+    *mdl  
+    *mdlOut  
+    *overlay  
+    *overlayOut  
 
 The styles are received by the modal this way:  
 

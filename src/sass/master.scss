@@ -4,8 +4,10 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   height: 100%;
   width: 100%;
+  opacity: .9;
 
   .mdl-overlay {
     position: fixed;
@@ -32,6 +34,7 @@
     animation: moveIn .5s cubic-bezier(.42,0,.58,1) forwards;
   }
     &.out {
+      z-index: 0;
       .mdl-overlay {
         animation: overlayOut .5s cubic-bezier(.42,0,.58,1) forwards;
         z-index: -9000;

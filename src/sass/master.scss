@@ -4,10 +4,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
   height: 100%;
   width: 100%;
-  opacity: .9;
 
   .mdl-overlay {
     position: fixed;
@@ -16,7 +14,7 @@
     height: 100%;
     width: 100%;
     z-index: 8000;
-    background: #373A47;
+    background-color: rgba(55, 58, 71, 0.9);
     animation: overlayIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
   }
 

@@ -20439,12 +20439,10 @@ var ReactJModal = function (_React$Component) {
         value: function renderModal() {
             var _this2 = this;
 
-            var _props = this.props,
-                modalStyles = _props.modalStyles,
-                overlayStyles = _props.overlayStyles;
+            var modalStyles = this.props.modalStyles;
 
             var _modalStyles = this.state.isOpen ? modalStyles.mdl : modalStyles.mdlOut;
-            var _overlayStyles = this.state.isOpen ? overlayStyles : modalStyles.overlayOut;
+            var _overlayStyles = this.state.isOpen ? modalStyles.overlay : modalStyles.overlayOut;
 
             var cotainerClass = this.state.isOpen ? 'mdl-container' : 'mdl-container out';
 
@@ -20473,12 +20471,10 @@ var ReactJModal = function (_React$Component) {
 
 ReactJModal.propTypes = {
     modalStyles: _react2.default.PropTypes.object,
-    overlayStyles: _react2.default.PropTypes.object,
     isOpen: _react2.default.PropTypes.bool
 };
 ReactJModal.defaultProps = {
     modalStyles: {},
-    overlayStyles: {},
     isOpen: false
 };
 

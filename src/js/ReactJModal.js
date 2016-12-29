@@ -4,14 +4,12 @@ class ReactJModal extends React.Component {
 
     static propTypes = {
         modalStyles: React.PropTypes.object,
-        overlayStyles: React.PropTypes.object,
         isOpen: React.PropTypes.bool
     };
 
 
     static defaultProps = {
         modalStyles: {},
-        overlayStyles: {},
         isOpen: false
     };
 
@@ -43,9 +41,9 @@ class ReactJModal extends React.Component {
 
     renderModal() {
 
-        const { modalStyles, overlayStyles } = this.props;
+        const { modalStyles } = this.props;
         const _modalStyles = this.state.isOpen ? modalStyles.mdl : modalStyles.mdlOut;
-        const _overlayStyles = this.state.isOpen ? overlayStyles : modalStyles.overlayOut;
+        const _overlayStyles = this.state.isOpen ? modalStyles.overlay : modalStyles.overlayOut;
 
         const cotainerClass = this.state.isOpen ? 'mdl-container' : 'mdl-container out';
 

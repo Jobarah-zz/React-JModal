@@ -16,11 +16,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70%;
-    height: 55%;
+    height: 70%;
     background-color: #fff;
   }
   .logo {
   	position: relative;
+    z-index: 1;
     height: 6rem;
     width: 6rem;
     border-radius: 50%;

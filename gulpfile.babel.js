@@ -3,6 +3,8 @@
     import sourcemaps from 'gulp-sourcemaps';
     import gutil from 'gulp-util';
     import connect from 'gulp-connect';
+    import babel from 'gulp-babel';
+    import concat from 'gulp-concat';
 
     //== SASS
     import sass from 'gulp-sass';
@@ -135,6 +137,16 @@
         });
         return callback();
     });
+
+    gulp.task('makeDeploy', () => {
+        return gulp.src('./src/js/ReactJModal.js')
+            .pipe(babel({
+                "presets": ["react", "es2015", "stage-0", "stage-3"]
+            }))
+            .pipe(concat('ReactJModal.js'))
+            .pipe(gulp.dest('./dist/js'));
+    });
+
 
     //== Gulp Connect::Server task
     gulp.task('connect', () => {

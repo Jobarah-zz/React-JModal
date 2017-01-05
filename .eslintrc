@@ -3,17 +3,14 @@
   "env": {
     "browser": true,
     "node": true,
-    "mocha": true,
     "es6": true
   },
   "globals": {
     "_app": true,
-    "$": true,
     "_global": true,
     "React": true,
     "ReactDOM": true,
     "define": true,
-    "Nes": true
   },
   "ecmaFeatures": {
     "arrowFunctions": true,

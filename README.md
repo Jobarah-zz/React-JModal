@@ -39,5 +39,6 @@ ReactDOM.render( <ReactJModal modalStyles = {modalStyles}>
 	</ReactJModal>, document.getElementById('app'));
 ```
 
-Live example can be seen here: https://jobarah.github.io/React-JModal/  
+# Live Demo  
+https://jobarah.github.io/React-JModal/  
 

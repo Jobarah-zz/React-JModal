@@ -23,7 +23,10 @@
     import path from 'path';
 
 // Setting internals ============================
-    const internals = {};
+    const internals = {
+        isWatchify: false,
+        deps: [] // Here would go global modules. E.G.: ['react', 'react-dom']
+    };
     internals.static = __dirname;
     internals.src = internals.static + '/src';
 

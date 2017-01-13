@@ -20524,7 +20524,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var modalStyles = exports.modalStyles = {
     mdl: {
-        position: 'absolute',
+        position: 'fixed',
         top: '50%',
         left: '50%',
         zIndex: '9000',

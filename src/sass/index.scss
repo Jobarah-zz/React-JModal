@@ -44,7 +44,7 @@
     bottom: 2%;
     right: 0;
     z-index: 1;
-    width: 4rem;
+    width: 9%;
     .octo {
       position: relative;
       float: right;
@@ -53,10 +53,10 @@
       background: #ae6cca;
       img {
         position: absolute;
-        top: 10%;
+        top: 50%;
         left: 50%;
-        height: 50%;
-        transform: translateX(-50%);
+        height: 80%;
+        transform: translate(-50%, -50%);
       }
     }
     .npm {
@@ -67,10 +67,10 @@
       background: #e74c3c;
       img {
         position: absolute;
-        top: 30%;
+        top: 50%;
         left: 50%;
-        height: 20%;
-        transform: translateX(-50%);
+        height: 50%;
+        transform: translate(-50%, -50%);
       }
     }
 }
@@ -81,6 +81,40 @@
     .contents {
       width: 55%;
       height: 55%;
+    }
+  }
+}
+
+@media screen and (max-device-width: 700px) 
+              and (orientation:portrait){
+ .footer {
+  .npm { 
+    img { height: 40%; }
+    }
+  }
+}
+
+@media screen and (max-device-width: 600px) 
+              and (orientation:portrait){
+ .footer {
+  width: 15%;
+  .npm { 
+    img { height: 30%; }
+    }
+  }
+}
+
+@media screen and (max-device-width: 420px) 
+              and (orientation:portrait){
+ .footer {
+  width: 12%;
+  .octo {
+    img{ 
+      height: 70%;
+    }
+  }
+  .npm { 
+    img { height: 25%; }
     }
   }
 }

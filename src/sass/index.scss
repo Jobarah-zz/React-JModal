@@ -117,7 +117,7 @@
               and (orientation:landscape){
   body {
     .contents {
-      width: 55%;
+      width: 80%;
     }
   }
 }
@@ -133,6 +133,9 @@
   .npm { 
     img { height: 40%; }
     }
+  }
+  .contents {
+    top: 6rem;
   }
 }
 
@@ -169,6 +172,9 @@
   .npm { 
     img { height: 25%; }
     }
+  }
+  .contents {
+    top: 6.5rem;
   }
 }
 

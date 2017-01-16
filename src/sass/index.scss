@@ -122,6 +122,12 @@
   }
 }
 
+@media screen and (max-device-width: 1000px) {
+  .contents {
+    width: 90%;
+  }
+}
+
 @media screen and (max-device-width: 700px) {
  .footer {
   .npm { 
@@ -163,12 +169,6 @@
   .npm { 
     img { height: 25%; }
     }
-  }
-}
-
-@media screen and (max-device-width: 414px) {
-  .contents {
-    width: 75%;
   }
 }
 

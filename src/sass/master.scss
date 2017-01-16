@@ -1,4 +1,5 @@
 @import 'index';
+@import 'prism';
 
 .mdl-container {
   position: absolute;
@@ -43,6 +44,15 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .mdl-container {
+    .mdl {
+        width: 80%;
+        height: 45%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
   .mdl-container {
     .mdl {
         width: 80%;

@@ -11,14 +11,52 @@
     background-color: #26A65B;
     border-bottom: .5rem solid #36D7B7;
   }
+  .txt-center {
+    text-align: -webkit-center;
+  }
+  .ssf {
+    font-family: sans-serif;
+  }
+  .pr {
+    position: relative;
+  }
   .contents {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 6%; 
     width: 70%;
-    height: 70%;
+    padding-bottom: 2.5%;
     background-color: #fff;
+
+    .jmodal {
+      font-family: 'Bungee Shade', cursive;
+      font-size: 5rem;
+      text-align: -webkit-center;
+      padding-bottom: 2%;
+    }
+    .sub-header {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+    .usage {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        padding-top: 5%;
+    }
+    
+    .objectDesc {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        padding-top: 5%;  
+    }
   }
   .logo {
   	position: relative;
@@ -80,13 +118,11 @@
   body {
     .contents {
       width: 55%;
-      height: 55%;
     }
   }
 }
 
-@media screen and (max-device-width: 700px) 
-              and (orientation:portrait){
+@media screen and (max-device-width: 700px) {
  .footer {
   .npm { 
     img { height: 40%; }
@@ -94,18 +130,29 @@
   }
 }
 
-@media screen and (max-device-width: 600px) 
-              and (orientation:portrait){
+@media screen and (max-device-width: 600px) {
  .footer {
   width: 15%;
   .npm { 
     img { height: 30%; }
     }
   }
+  .contents {
+    .jmodal {
+      font-size: 4rem;
+    }
+  }
 }
 
-@media screen and (max-device-width: 420px) 
-              and (orientation:portrait){
+@media only screen and (max-width: 490px) {
+  .contents {
+    .jmodal {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+@media screen and (max-device-width: 420px) {
  .footer {
   width: 12%;
   .octo {
@@ -119,12 +166,16 @@
   }
 }
 
-@media screen and (max-device-width: 414px) 
-              and (orientation:portrait){
-  body {
-    .contents {
-      width: 75%;
-      height: 60%;
+@media screen and (max-device-width: 414px) {
+  .contents {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .contents {
+    .jmodal {
+      font-size: 2.75rem;
     }
   }
 }

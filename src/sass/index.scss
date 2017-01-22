@@ -29,13 +29,19 @@
     width: 70%;
     padding-bottom: 2.5%;
     background-color: #fff;
+    margin-bottom: 4rem; 
 
     .jmodal {
       font-family: 'Bungee Shade', cursive;
       font-size: 5rem;
-      text-align: -webkit-center;
-      padding-bottom: 2%;
+      text-align: center;
     }
+    .jmodal-sub {
+      display: block;
+      line-height: 0;
+      margin-bottom: 5rem;
+    }
+
     .sub-header {
         position: relative;
         left: 50%;

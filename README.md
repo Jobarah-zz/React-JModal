@@ -28,7 +28,7 @@ The styles are received by the modal this way:
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactJModal from 'React-JModal';
+import ReactJModal from 'react-jmodal';
 import {data} from '../data';
 import {modalStyles} from '../sass/modal_styles';
 
